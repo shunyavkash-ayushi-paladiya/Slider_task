@@ -1,0 +1,48 @@
+@media screen and (max-width:1024px) {
+    .guide-inner {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .guide-left {
+        width: 100%;
+    }
+
+    .guide-right {
+        width: 100%;
+    }
+
+    .custom-swiper-button{
+        display: none;
+    }
+
+    .guide-left{
+        margin-left: 0;
+    }
+
+    .custom-swiper-buttons{
+        display: inline-flex;
+    }
+
+    .swiper {
+        padding-bottom: 50px;
+    }
+
+    .swiper-slide{
+        margin-bottom: 40px;
+    }
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom: 100px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .guide-head {
+        font-size: 29px;
+    }
+
+    .marketing-head {
+        font-size: 26px;
+    }
+}

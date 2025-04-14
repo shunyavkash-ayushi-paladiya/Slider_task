@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #661545;
+    --gradient: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+    --back-gradient: linear-gradient(90deg, #f857a528 0%, #ff585823 100%);
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #2d2d2dd8;
+    --light-gray: #6c6e71;
+    --dull-gray: #FAFAFA;
+}
+
+body {
+    font-family: "Special Gothic", sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background-color: #fdfdfd;
+}
+
+img {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1460px;
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.guide-sec {
+    margin-block: 100px;
+}
+
+.guide-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.guide-left {
+    position: relative;
+    width: 50%;
+    margin-left: 35px;
+}
+
+.guide-right {
+    width: 50%;
+}
+
+.swiper {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal span.swiper-pagination-bullet {
+    background-color: var(--purple);
+    width: 12px;
+    height: 12px;
+}
+
+.swiper.guideSwiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+    margin: 0;
+}
+
+.swiper-slide {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.custom-swiper-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--white);
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.swiper-button-prev {
+    left: -50px;
+}
+
+.swiper-button-next {
+    right: -50px;
+}
+
+.swiper-button-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: default;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+.marketing-intro img {
+    width: 150px;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.marketing-list {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--light-gray);
+    margin-top: 20px;
+}
+
+.marketing-list span {
+    color: var(--black);
+    font-weight: 600;
+}
+
+.marketing-intro {
+    background-color: var(--dull-gray);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.marketing-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.marketing-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.marketing-num {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.marketing-head {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--purple);
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.marketing-desc,
+.marketing-descr {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--light-gray);
+    line-height: 20px;
+    margin-top: 15px;
+}
+
+.guide-betch {
+    display: inline-flex;
+    border-radius: 30px;
+    align-items: center;
+    padding: 6px 14px;
+    gap: 6px;
+    background: var(--back-gradient);
+}
+
+.guide-betch svg {
+    color: rgb(255, 219, 18);
+    transform: rotate(90deg);
+    font-size: 16px;
+}
+
+.guide-betch span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.guide-head {
+    font-size: 56px;
+    font-weight: 600;
+    color: var(--gray);
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.guide-intro {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.guide-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.guide-list label {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.guide-list label span {
+    color: var(--light-gray);
+    font-weight: 500;
+}
+
+.guide-list input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--purple);
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.guide-list input[type="checkbox"]:checked {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.guide-list input[type="checkbox"]:checked::after {
+    content: "✔";
+    font-size: 14px;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.guide-a {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--white);
+    background-color: var(--purple);
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.guide-a:hover {
+    background-color: transparent;
+    border: 2px solid var(--purple);
+    color: var(--purple);
+}
+
+.custom-swiper-buttons {
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    color: var(--white);
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease-in-out;
+    display: none;
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.swiper-buttons-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: default;
+}
+
+.swiper-buttons-prev::after,
+.swiper-buttons-next::after {
+    display: none;
+}
